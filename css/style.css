@@ -1,0 +1,107 @@
+::selection {
+    background-color: rgba(254, 194, 96, .5);
+    color: #352e28;
+}
+
+body{
+    background-color: #f7ecde;
+}
+
+.logo {
+    font-size: 3.1rem;
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+    width: fit-content;
+}
+ h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 25%;
+    left: 0;
+    bottom: 10px;
+    background-color: #fec260;
+    transition: height 350ms;
+    z-index: -1;
+}
+h1:hover::before{
+    height: 50%;
+}
+.title{
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+    
+}
+
+.form-control:focus {
+    border-color: #fec260;
+    box-shadow: 0 0 0 .25rem rgba(254, 194, 96, .25);
+}
+.btn-custom{
+    background-color: #d1512d;
+    color: white;
+    width: 150px;
+    height: 40px;
+    display: block;
+    margin-inline: auto;
+}
+.btn-custom:hover{
+    background-color: #d1512d;
+    color: white;
+    filter: brightness(120%);
+}
+.btn-custom:active{
+    background-color: #fff;
+    color: black;
+}
+.inputs-container{
+    border-top: dotted black 2px;
+    border-bottom: dotted black 2px;
+}
+
+.btn-visit{
+    background-color: #9eb23b;
+    color: white;
+}
+.btn-visit:hover{
+    background-color: #9eb23b;
+    color: white;
+    filter: brightness(90%);
+}
+.btn-visit:active , .btn-delete:active{
+    background-color: #fff !important;
+    color: black !important;
+    filter: brightness(100%);
+}
+
+
+.modal{
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+.circles{
+    
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.c1{
+    background-color: #f15f5d;
+}
+.c2{
+    background-color: #febe2e;
+}
+.c3{
+    background-color: #4db748;
+}
+.modal-body i{
+    color: #bb4120;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="imgs/bookmark.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="py-5">
+    <div class="container  mb-5">
+        <h1 class=" mb-0 logo  py-2 mx-auto position-relative "> Bookmarker</h1>  
+    </div>
+    <div class="container mt-5 inputs-container py-3">
+          <h2 class="title mb-5"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+          <label for="siteName" class="form-label fw-semibold"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+          <input oninput="validateform(nameRegex,this)" type="text" id="siteName" class="form-control mb-4 " placeholder="Bookmark Name">
+          <label for="siteUrl" class="form-label fw-semibold"><i class="fa-solid fa-link pe-2"></i>Site Url</label>
+          <input oninput="validateform(urlRegex,this)" type="text" id="siteUrl" class="form-control mb-5" placeholder="Website Url">
+      
+          <button id="submitBtn"  class="btn btn-custom  my-2 " type="button">Submit</button>
+
+    </div>
+   <div class="container mt-4 bg-light">
+    <div class="row  text-capitalize border-bottom fw-bold py-2 text-center ">
+      <p class="mb-0  col-3">index</p>
+      <p class="mb-0 col-3">Website Name</p>
+      <p class="mb-0 col-3">Visit</p>
+      <p class="mb-0 col-3 ">Delete</p>
+    </div>
+    <div  id="displayContainer" class="displayContainer">
+    </div>
+   </div>
+
+
+   <div   id="modalAlert" class="modal  d-none align-items-center" >
+    <div  class="modal-dialog">
+      <div class="modal-content px-3 pt-3">
+        <div class="modal-header py-4 px-4 border-0">
+          <span class="circles c1"></span>
+          <span class="circles c2"></span>
+          <span class="circles c3"></span>
+          <button onclick="hideModal()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <h5 class="mb-4">Site Name or Url is not valid, Please follow the rules below :</h5>
+          <p class="fs-5"><i class="fa-regular fa-circle-right p-2"></i>Site name must contain at least 3 characters</p>
+          <p class="fs-5"><i class="fa-regular fa-circle-right p-2"></i>Site URL must be a valid one</p>
+
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+   
+    <script src="js/index.js"></script>
+</body>
+</html>
